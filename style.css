@@ -925,50 +925,81 @@ h3{
     border-radius: 2px;
 } 
 
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+@media(max-width: 700px) {
     
-    nav, .navbar, header nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important; 
-        justify-content: space-around !important;
-        align-items: center !important;
-        padding: 8px 4px !important;
-        background: rgba(15, 23, 42, 0.85) !important; 
-        backdrop-filter: blur(5px) !important;
-        margin-bottom: 10px !important;
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 2%;
     }
 
 
-    nav a, .navbar a {
-        font-size: 11px !important;
-        padding: 3px 4px !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
+    nav img {
+        width: 65px !important;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 5px 0;
+        gap: 8px 12px; 
+    }
+
+    .nav-links ul li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 12px; 
+        padding: 2px 4px;
     }
 
     
-    header, .hero-header {
-        padding-top: 5px !important;
+    .text-box {
+        top: 52%; 
+        width: 90%;
     }
 
-    .hero-text, .header-content {
-        margin-top: 15px !important;
+    .text-box h1 {
+        font-size: 20px;
+        line-height: 1.2;
     }
 
-  
-    .contact-us, .contact-container, .location {
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important;
-        width: 100% !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
+    .text-box p {
+        font-size: 11px;
+        margin: 6px 0 12px;
     }
 
-    .contact-col, .contact-left, .contact-right {
-        width: 100% !important;
-        margin-bottom: 15px !important;
+    .hero-btn {
+        padding: 6px 14px;
+        font-size: 12px;
     }
 }
+
+/* --- Mobile Responsiveness --- */
+@media(max-width: 768px) {
+    
+    .testimonials .row,
+    .testimonials-col,
+    .row {
+        flex-direction: column !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    .testimonials-col {
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+} 

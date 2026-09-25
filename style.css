@@ -925,42 +925,78 @@ h3{
     border-radius: 2px;
 
     /* --- Mobile Responsiveness --- */
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 @media (max-width: 768px) {
-   
-    nav, .navbar, header nav {
+
+    nav {
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important; 
-        justify-content: space-around !important;
+        flex-direction: column !important;
         align-items: center !important;
-        padding: 8px 4px !important;
-        background: rgba(15, 23, 42, 0.85) !important; 
-        backdrop-filter: blur(5px) !important;
-        margin-bottom: 10px !important;
+        justify-content: center !important;
+        padding: 10px 5px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
    
-    nav a, .navbar a {
-        font-size: 11px !important;
-        padding: 3px 4px !important;
+    nav img, .logo, nav a img {
+        width: 60px !important;
+        height: auto !important;
+        max-height: 50px !important;
+        margin: 0 auto 8px auto !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+    }
+
+   
+    .nav-links, nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 !important;
         margin: 0 !important;
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    .nav-links li, nav ul li {
+        display: inline-block !important;
+        list-style: none !important;
+        margin: 0 !important;
+    }
+
+    .nav-links a, nav ul a, nav a {
+        font-size: 12px !important;
+        padding: 4px 6px !important;
+        display: inline-block !important;
         white-space: nowrap !important;
     }
 
-   
-    header, .hero-header {
-        padding-top: 5px !important;
+
+    .header-text, .hero-text, .text-box {
+        width: 90% !important;
+        margin: 10px auto !important;
+        text-align: center !important;
     }
 
-    .hero-text, .header-content {
-        margin-top: 15px !important;
+    .header-text h1, .text-box h1 {
+        font-size: 20px !important;
+        line-height: 1.3 !important;
     }
 
+  
     .contact-us, .contact-container, .location {
         flex-direction: column !important;
         grid-template-columns: 1fr !important;
         width: 100% !important;
-        padding: 15px !important;
+        padding: 10px !important;
         box-sizing: border-box !important;
     }
 
@@ -969,4 +1005,6 @@ h3{
         margin-bottom: 15px !important;
     }
 }
+
+
  
